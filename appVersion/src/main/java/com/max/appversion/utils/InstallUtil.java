@@ -48,7 +48,7 @@ public class InstallUtil {
     private void startInstallN() {
 
         ApplicationInfo applicationInfo = mAct.getApplicationInfo();
-        String authority = applicationInfo.packageName + ".provider";
+        String authority = applicationInfo.packageName + ".updateAppProvider";
         //参数1 上下文, 参数2 在AndroidManifest中的android:authorities值, 参数3  共享的文件
         Uri apkUri = FileProvider.getUriForFile(mAct, authority, new File(mPath));
         Intent install = new Intent(Intent.ACTION_VIEW);

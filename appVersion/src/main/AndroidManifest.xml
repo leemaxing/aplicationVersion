@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.max.appversion">
 
 
@@ -9,9 +10,10 @@
     <application
         android:networkSecurityConfig="@xml/network_security_config">
         <activity android:name=".TestActivity"></activity>
-        <provider android:authorities="${applicationId}.provider"
+        <provider android:authorities="${applicationId}.updateAppProvider"
             android:exported="false" android:grantUriPermissions="true"
-            android:name="android.support.v4.content.FileProvider">
+            android:name="android.support.v4.content.FileProvider"
+            tools:replace="android:authorities">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
