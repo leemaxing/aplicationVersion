@@ -10,10 +10,9 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.support.annotation.RequiresApi;
+import android.support.v4.content.FileProvider;
 
-
-import androidx.annotation.RequiresApi;
-import androidx.core.content.FileProvider;
 
 import java.io.File;
 

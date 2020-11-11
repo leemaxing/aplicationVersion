@@ -79,7 +79,7 @@ public class UpdateTools {
         String packgeName = mContext.getApplicationInfo().packageName;
         String api = "http://liicon.com:7768/updateMsg/getMsg";
         Map param = new HashMap();
-        param.put("appName","com.qxc.app");
+        param.put("appName",packgeName);
 
         NetworkingTools.post(api, param, new NetworkingTools.NetworkingResponseListener() {
             @Override
