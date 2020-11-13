@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="600dp"
     android:orientation="vertical"
-    android:background="@drawable/up_bg">
+    android:background="@drawable/timg">
 
 
     <TextView
