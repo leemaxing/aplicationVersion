@@ -77,7 +77,7 @@ public class UpdateTools {
 
         this.mCallBack = callBack;
         String packgeName = mContext.getApplicationInfo().packageName;
-        String api = "http://liicon.com:7768/updateMsg/getMsg";
+        String api = "http://113.107.253.58:8890/updateMsg/getMsg";
         Map param = new HashMap();
 //        param.put("appName","liicon.com.hzspotcheck");
         param.put("appName",packgeName);
@@ -266,7 +266,7 @@ public class UpdateTools {
 
     void download(String url){
 
-        String urlStr = "http://liicon.com:7768/updateMsg/download?filePath=" + updateUrl;
+        String urlStr = "http://113.107.253.58:8890/updateMsg/download?filePath=" + updateUrl;
         NetworkingTools.download(urlStr, "app.apk", getDiskCachePath(mContext), new NetworkingTools.NetDownLoadListener() {
             @Override
             public void onSuccess(String status, String path) {
