@@ -12,7 +12,7 @@
         <activity android:name=".TestActivity"></activity>
         <provider android:authorities="${applicationId}.updateAppProvider"
             android:exported="false" android:grantUriPermissions="true"
-            android:name="android.support.v4.content.FileProvider"
+            android:name=".update.UpdateProvider"
             tools:replace="android:authorities">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
