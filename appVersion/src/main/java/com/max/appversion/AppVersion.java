@@ -1,6 +1,7 @@
 package com.max.appversion;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,6 +10,7 @@ import com.max.appversion.listenner.ActivityOnResultListenner;
 import com.max.appversion.utils.InstallUtil;
 import com.max.appversion.update.ToolClass;
 import com.max.appversion.update.UpdateTools;
+import com.max.appversion.view.NonUpdateDialog;
 import com.max.appversion.view.UpdateDialog;
 
 public class AppVersion implements ActivityOnResultListenner {
@@ -177,7 +179,13 @@ public class AppVersion implements ActivityOnResultListenner {
 
             @Override
             public void onNoUpdate() {
-
+                ToolClass.mainTread(new ToolClass.ToolMainThreadCall() {
+                    @Override
+                    public void call() {
+                        NonUpdateDialog nonUpdateDialog = new NonUpdateDialog(mContext);
+                        nonUpdateDialog.show();
+                    }
+                });
             }
 
             @Override
