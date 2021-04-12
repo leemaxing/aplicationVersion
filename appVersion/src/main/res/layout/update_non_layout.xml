@@ -3,13 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    android:orientation="vertical">
+    android:minWidth="200dp"
+    android:orientation="vertical"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="提示"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"/>
 
     <View
@@ -21,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_gravity="center"
         android:text="当前已经是最新版本。"/>
 
@@ -29,14 +32,15 @@
         android:layout_width="match_parent"
         android:layout_height="0.8px"
         android:background="@color/darkgray"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="25dp"/>
 
     <Button
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:text="取消"
         android:layout_marginTop="15dp"
-        android:onClick="cancel"
-        android:layout_gravity="center"/>
+        android:id="@+id/cancelBtn"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"/>
 
 </LinearLayout>

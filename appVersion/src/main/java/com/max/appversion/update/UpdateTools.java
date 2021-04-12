@@ -76,6 +76,7 @@ public class UpdateTools {
     public void checkVersion(final UpdateToolsCallBack callBack){
 
         this.mCallBack = callBack;
+//        String packgeName = "liicon.com.spotcheck";//mContext.getApplicationInfo().packageName;
         String packgeName = mContext.getApplicationInfo().packageName;
         String api = "http://113.107.253.58:8890/updateMsg/getMsg";
         Map param = new HashMap();
